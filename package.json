@@ -1,0 +1,19 @@
+{
+  "name": "toggle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "frontend:install": "npm install --prefix frontend",
+    "backend:install": "npm install --prefix backend",
+    "frontend:start": "npm start --prefix frontend",
+    "backend:dev": "npm run dev --prefix backend",
+    "dev": "concurrently \"npm run backend:dev\" \" npm run frontend:start\" "
+  },
+  "keywords": [],
+  "author": "krishna",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
