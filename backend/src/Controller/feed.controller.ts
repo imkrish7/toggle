@@ -69,10 +69,16 @@ const getFeeds = async(req: Request, res: Response)=>{
 		const { phoneNumber } = req.token;
 		const user = await User.findOne({phoneNumber});
 		if(user){
-			const posts: Array<IPost> = await Post.find({})
+			const userPosts: Array<IPost> = await Post.find({
+				phoneNumber
+			})
+			const othersPosts: Array<IPost> = await Post.find({
+				isPrivate: false,
+				phoneNumber: {$ne: phoneNumber}
+			})
 			return res.status(200).json({
 				success: true,
-				posts
+				posts: [...userPosts, ...othersPosts]
 			})
 		}else{
 			return res.status(403).json({
