@@ -1,6 +1,10 @@
 # toggle
 A Mini Instagram
 
+# Required Dependencies
+1. install redis and run in background
+2. add all required server side credentials in .env file
+
 # Quick Start
 
 ```
