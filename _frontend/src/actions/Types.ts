@@ -1,0 +1,8 @@
+export const GET_OTP = "GET_OTP"
+export const VERIFY_OTP = "VERIFY_OTP"
+export const GET_FEED = "GET_FEED"
+export const GET_PRESIGNED_URL = "GET_PRESIGNED_URL"
+export const CREATE_POST = "CREATE_POST"
+export const DELETE_POST = "DELETE_POST"
+export const TOGGLE_PRIVACY = "TOGGLE_PRIVACY"
+export const GET_LOGOUT = "GET_LOGOUT"
